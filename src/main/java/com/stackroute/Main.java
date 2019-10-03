@@ -12,5 +12,13 @@ public class Main
 
         Movie movie = context.getBean("movie", Movie.class);
         System.out.println(movie);
+
+        Movie moviea = context.getBean("moviea", Movie.class);
+        Movie movieb = context.getBean("movieb", Movie.class);
+        System.out.println("For singleton scope (moviea == movieb) : "+(moviea == movieb));
+
+        Movie movieA = context.getBean("movieA", Movie.class);
+        Movie movieB = context.getBean("movieB", Movie.class);
+        System.out.println("For prototype scope (movieA == movieB) : "+(movieA == movieB));
     }
 }
