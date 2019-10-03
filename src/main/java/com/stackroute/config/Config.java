@@ -1,13 +1,14 @@
 package com.stackroute.config;
 
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Actor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.stackroute.domain com.stackroute.demo")
+@ComponentScan("com.stackroute.demo com.stackroute.domain")
 public class Config {
     @Bean
     public Actor actor() {
@@ -35,5 +36,10 @@ public class Config {
     {
         BeanLifecycleDemoBean beanLifecycleDemoBean=new BeanLifecycleDemoBean();
         return beanLifecycleDemoBean;
+    }
+
+    @Bean
+    public BeanPostProcessorDemoBean beanPostProcessorDemoBean() {
+        return new BeanPostProcessorDemoBean();
     }
 }
