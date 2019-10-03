@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.stackroute.domain")
 public class Config {
     @Bean
-    public Actor actorSoumen() {
+    public Actor actor() {
         Actor actor = new Actor();
         actor.setAge(22);
         actor.setGender("Male");
